@@ -78,13 +78,13 @@
                         </span>
                     </a>
                     <!-- <ul class="sidebar-submenu">
-                                <li>
-                                    <a href="{{ route('admin.categories.index') }}">
-                                        <i class="ri-circle-fill circle-icon text-danger-main w-auto"></i>Categories
+                                    <li>
+                                        <a href="{{ route('admin.categories.index') }}">
+                                            <i class="ri-circle-fill circle-icon text-danger-main w-auto"></i>Categories
 
-                                    </a>
-                                </li>
-                            </ul> -->
+                                        </a>
+                                    </li>
+                                </ul> -->
                 </li>
             @endcan
 
@@ -271,6 +271,15 @@
 
                 </li>
             @endcan
+
+
+                <li style="margin-bottom: 8px;">
+                <a
+                    href="{{ route('services')}}">
+                    <iconify-icon icon="mdi:view-dashboard-outline" class="menu-icon"></iconify-icon>
+                    <span>Services</span>
+                </a>
+            </li>
 
         </ul>
     </div>

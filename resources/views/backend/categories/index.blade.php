@@ -10,7 +10,8 @@
                 </h6>
                 <ul class="d-flex align-items-center gap-2">
                     <li class="fw-medium">
-                        <a href="{{ route('dashboard') }}" class="d-flex align-items-center gap-1 text-success-1000 text-md hover-text-success ">
+                        <a href="{{ route('dashboard') }}"
+                            class="d-flex align-items-center gap-1 text-success-1000 text-md hover-text-success ">
                             <iconify-icon icon="solar:home-smile-angle-outline" class="icon text-lg"></iconify-icon>
                             Dashboard
                         </a>
@@ -88,14 +89,14 @@
                                                 <iconify-icon icon="lucide:edit"></iconify-icon>
                                             </a>
                                             <form action="{{ route('admin.categories.destroy', $category->id) }}"
-                                                method="POST"
-                                                class="d-inline delete-form mx-2">
-                                              @csrf
-                                              @method('DELETE')
-                                              <button type="button" class="btn-delete w-32-px h-32-px bg-danger-focus text-danger-main rounded-circle d-inline-flex align-items-center justify-content-center">
-                                                  <iconify-icon icon="mingcute:delete-2-line"></iconify-icon>
-                                              </button>
-                                          </form>
+                                                method="POST" class="d-inline delete-form mx-2">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="button"
+                                                    class="btn-delete w-32-px h-32-px bg-danger-focus text-danger-main rounded-circle d-inline-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="mingcute:delete-2-line"></iconify-icon>
+                                                </button>
+                                            </form>
 
 
                                         </td>
@@ -110,5 +111,3 @@
 
         </div>
     @endsection
-
-
