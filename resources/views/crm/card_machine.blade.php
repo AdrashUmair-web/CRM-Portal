@@ -6,373 +6,663 @@
     <main class="dashboard-main">
         @include('backend.layouts.partials.header')
 
-        <div class="dashboard-main-body py-4">
+        <div class="dashboard-main-body py-3 bg-light">
             <div class="container-fluid">
 
-                <!-- PROFESSIONAL UNIQUE HEADER -->
-                <div class="mb-3 p-4 rounded-3 shadow-sm text-white d-flex flex-column flex-md-row align-items-center justify-content-between"
-                     style="background: linear-gradient(135deg, #4a90e2, #50c9c3, #00d2ff);">
-                    
-                    <!-- LEFT TEXT -->
-                    <div class="mb-2 mb-md-0 p-3">
-                        <h5 class="fw-bold mb-1 d-flex align-items-center">
-                            <i class="bi bi-ui-checks-grid me-2"></i>
-                            Application Form
-                        </h5>
-                        <small class="text-white-50 fw-medium" style="letter-spacing: 0.3px;">Fill all required details carefully</small>
-                    </div>
-
-                    <!-- RIGHT BADGE WITH ICON -->
-                    <span class="badge bg-white text-primary py-1 px-3 me-3 fw-semibold d-flex align-items-center small">
-                        <i class="bi bi-info-circle me-1"></i> Application Info
-                    </span>
+                <!-- HEADER -->
+                <div class="mb-3 px-3 py-2 bg-white border rounded">
+                    <h6 class="fw-bold mb-0 text-primary">
+                        <i class="bi bi-ui-checks-grid me-1"></i> Application Form
+                    </h6>
                 </div>
 
                 <form>
-                    <div class="row g-4">
+                    <!-- APPLICATION INFORMATION -->
+                    <div class="form-section mb-3">
+                        <div class="section-title"><span>Application Information</span></div>
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-3 "><label>Application Agent *</label></div>
+                            <div class="col-md-9">
+                                <select class="form-select">
+                                    <option disabled selected>Select Agent</option>
+                                    <option>Ali Hassan</option>
+                                    <option>Usman Khan</option>
+                                    <option>Sara Ahmed</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
 
-                        <!-- LEFT SIDE -->
-                        <div class="col-lg-8">
+                    <!-- CUSTOMER DETAILS -->
+                    <div class="form-section mb-3">
+                        <div class="section-title"><span>Customer Details</span></div>
 
-                            <!-- APPLICATION -->
-                            <div class="card modern-card">
-                                <div class="card-header section-header bg-primary text-white">
-                                    Application Information
+                        <div class="row g-3 align-items-center mb-2 pb-2">
+                            <div class="col-md-2"><label>Company Name *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="Enter company name">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-building"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Trading Name *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="Enter trading name">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-shop"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2 pb-2">
+                            <div class="col-md-2"><label>Business Entity *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <select class="form-select border-end-0">
+                                    <option>Select</option>
+                                </select>
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-diagram-3"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Business Nature *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <select class="form-select border-end-0">
+                                    <option>Select</option>
+                                </select>
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-briefcase"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2 pb-2">
+                            <div class="col-md-2"><label>Title *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <select class="form-select border-end-0">
+                                    <option>Mr</option>
+                                    <option>Mrs</option>
+                                </select>
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-person-badge"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Merchant Full Name *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="Enter full name">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-person"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2 pb-2">
+                            <div class="col-md-2"><label>Position *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <select class="form-select border-end-0">
+                                    <option>Owner</option>
+                                    <option>Director</option>
+                                    <option>Manager</option>
+                                </select>
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-people"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Email *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="email" class="form-control border-end-0" placeholder="example@email.com">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2 pb-2">
+                            <div class="col-md-2"><label>Phone *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="03XXXXXXXXX">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-telephone"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Companies House Number</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-card-text"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2 pb-2">
+                            <div class="col-md-2"><label>VAT / TAX Number</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-receipt"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Trading Address</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-geo-alt"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- DIRECTOR DETAILS -->
+                    <div class="form-section mb-3">
+                        <div class="section-title"><span>Director Details</span></div>
+
+                        <div class="director-block">
+
+                            <div class="row g-3 align-items-center mb-2 pb-2">
+                                <div class="col-md-2"><label>Director Name</label></div>
+                                <div class="col-md-4 d-flex align-items-center">
+                                    <input class="form-control border-end-0" placeholder="Enter Director Name">
+                                    <span class="icon-box border-start-0">
+                                        <i class="bi bi-person"></i>
+                                    </span>
                                 </div>
-                                <div class="card-body">
-                                    <label class="form-label">Application Agent *</label>
-                                    <select class="form-select">
-                                        <option disabled selected>Select Agent</option>
-                                        <option>Ali Hassan</option>
-                                        <option>Usman Khan</option>
-                                        <option>Sara Ahmed</option>
-                                    </select>
+
+                                <div class="col-md-2"><label>Date Of Birth</label></div>
+                                <div class="col-md-4 d-flex align-items-center">
+                                    <input type="date" class="form-control border-end-0">
+                                    <span class="icon-box border-start-0">
+                                        <i class="bi bi-calendar-date"></i>
+                                    </span>
                                 </div>
                             </div>
 
-                            <!-- CUSTOMER -->
-                            <div class="card modern-card mt-3">
-                                <div class="card-header section-header bg-dark text-white">
-                                    Customer Details
+                            <div class="row g-3 align-items-center mb-2 pb-2">
+                                <div class="col-md-2"><label>Phone No</label></div>
+                                <div class="col-md-4 d-flex align-items-center">
+                                    <input class="form-control border-end-0" placeholder="Enter Phone Number">
+                                    <span class="icon-box border-start-0">
+                                        <i class="bi bi-telephone"></i>
+                                    </span>
                                 </div>
-                                <div class="card-body row g-3">
 
-                                    <div class="col-md-6">
-                                        <label class="form-label">Company Name *</label>
-                                        <input class="form-control" placeholder="Enter company name">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Trading Name *</label>
-                                        <input class="form-control" placeholder="Enter trading name">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Business Entity *</label>
-                                        <select class="form-select">
-                                            <option disabled selected>Select</option>
-                                            <option>Sole Proprietor</option>
-                                            <option>Partnership</option>
-                                            <option>Private Limited</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Business Nature *</label>
-                                        <select class="form-select">
-                                            <option disabled selected>Select</option>
-                                            <option>Retail</option>
-                                            <option>Wholesale</option>
-                                            <option>Restaurant</option>
-                                            <option>Services</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Title *</label>
-                                        <select class="form-select">
-                                            <option>Mr</option>
-                                            <option>Mrs</option>
-                                            <option>Miss</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-8">
-                                        <label class="form-label">Merchant Full Name *</label>
-                                        <input class="form-control" placeholder="Enter full name">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Position *</label>
-                                        <select class="form-select">
-                                            <option>Owner</option>
-                                            <option>Director</option>
-                                            <option>Manager</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Email *</label>
-                                        <input type="email" class="form-control" placeholder="example@email.com">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Phone *</label>
-                                        <input class="form-control" placeholder="03XXXXXXXXX">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Companies House Number</label>
-                                        <input class="form-control">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">VAT / TAX Number</label>
-                                        <input class="form-control">
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label class="form-label">Trading Address</label>
-                                        <textarea class="form-control"></textarea>
-                                    </div>
-
+                                <div class="col-md-2"><label>Email Address</label></div>
+                                <div class="col-md-4 d-flex align-items-center">
+                                    <input type="email" class="form-control border-end-0" placeholder="Enter Email">
+                                    <span class="icon-box border-start-0">
+                                        <i class="bi bi-envelope"></i>
+                                    </span>
                                 </div>
                             </div>
 
-                            <!-- DIRECTOR -->
-                            <div class="card modern-card mt-3">
-                                <div class="card-header section-header bg-success text-white d-flex justify-content-between">
-                                    Director Details
-                                    <button class="btn btn-light btn-sm">+ Add More</button>
-                                </div>
-
-                                <div class="card-body row g-3">
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Director Name</label>
-                                        <input class="form-control">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Date of Birth</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Phone</label>
-                                        <input class="form-control">
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Email</label>
-                                        <input class="form-control">
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Address</label>
-                                        <input class="form-control">
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- APPLICATION DETAIL -->
-                            <div class="card modern-card mt-3">
-                                <div class="card-header section-header bg-info text-white">
-                                    Application Detail
-                                </div>
-
-                                <div class="card-body row g-3">
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Application Number *</label>
-                                        <input class="form-control" value="AUTO-001" readonly>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Service</label>
-                                        <input class="form-control" value="Card Machine" readonly>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Application Date *</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Renewal Date *</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Brand *</label>
-                                        <select class="form-select">
-                                            <option disabled selected>Select Brand</option>
-                                            <option>Verifone</option>
-                                            <option>Ingenico</option>
-                                            <option>PAX</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label class="form-label">Qty *</label>
-                                        <input type="number" class="form-control">
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="eposSwitch">
-                                            <label class="form-check-label ms-2" for="eposSwitch">EPOS System</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Delivery Address</label>
-                                        <textarea class="form-control"></textarea>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Comment</label>
-                                        <textarea class="form-control"></textarea>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- MONTHLY RENTAL -->
-                            <div class="card modern-card mt-3">
-                                <div class="card-header section-header bg-warning text-dark">
-                                    Monthly Rental
-                                </div>
-
-                                <div class="card-body row g-3">
-                                    @foreach (['Debit Card', 'Credit Card', 'Commercial Card', 'Authentication Fee', 'PCI', 'Rental'] as $field)
-                                        <div class="col-md-6 col-lg-4">
-                                            <label class="form-label">{{ $field }}</label>
-                                            <input type="number" class="form-control" placeholder="Enter {{ $field }}">
-                                        </div>
-                                    @endforeach
+                            <div class="row g-3 align-items-center mb-2 pb-2">
+                                <div class="col-md-2"><label>Home Address</label></div>
+                                <div class="col-md-10 d-flex align-items-center">
+                                    <input class="form-control border-end-0" placeholder="Enter Home Address">
+                                    <span class="icon-box border-start-0">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </span>
                                 </div>
                             </div>
 
                         </div>
+                    </div>
 
-                        <!-- RIGHT SIDE -->
-                        <div class="col-lg-4">
+                    <!-- APPLICATION DETAIL -->
+                    <div class="form-section mb-3">
+                        <div class="section-title"><span>Application Detail</span></div>
 
-                            <div class="card modern-card">
-                                <div class="card-header section-header bg-secondary text-dark">
-                                    Bank Details
-                                </div>
+                        <div class="row g-3 align-items-center mb-2">
+                            <div class="col-md-2"><label>Application Number *</label></div>
 
-                                <div class="card-body">
-                                    @foreach (['Name On Account', 'Account Number', 'Sort Code', 'IBAN', 'BIC', 'Name Of Bank'] as $field)
-                                        <label class="form-label">{{ $field }}</label>
-                                        <input class="form-control mb-3" placeholder="Enter {{ $field }}">
-                                    @endforeach
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" value="AUTO-001" readonly>
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-hash"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Service</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" value="Card Machine" readonly>
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-credit-card"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2">
+                            <div class="col-md-2"><label>Application Date *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="date" class="form-control border-end-0">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-calendar"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Renewal Date *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="date" class="form-control border-end-0">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-calendar-event"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2">
+                            <div class="col-md-2"><label>Brand *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <select class="form-select border-end-0">
+                                    <option disabled selected>Select Brand</option>
+                                    <option>Verifone</option>
+                                    <option>Ingenico</option>
+                                    <option>PAX</option>
+                                </select>
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-bag"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Qty *</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="number" class="form-control border-end-0">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-123"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2">
+                            <div class="col-md-2"><label>Delivery Address</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0"></input>
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-geo-alt"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Comment</label></div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0"></input>
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-chat-left-text"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center pt-1 mb-2">
+                            <div class="col-md-2">
+                                <label>EPOS System</label>
+                            </div>
+
+                            <div class="col-md-4 d-flex align-items-center">
+                                <div class="form-check form-switch ms-1">
+                                    <input class="form-check-input switcBtn" type="checkbox" id="eposSystem"
+                                        name="epos_system" value="1">
+                                    <label class="form-check-label ms-2 text-muted" for="eposSystem">
+                                        Enable
+                                    </label>
                                 </div>
                             </div>
 
-                            <div class="card modern-card mt-3">
-                                <div class="card-body text-center">
-                                    <button class="btn btn-gradient w-100">
-                                        <i class="bi bi-send me-1"></i> Submit Application
-                                    </button>
-                                </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- MONTHLY RENTAL -->
+                    <div class="form-section mb-3">
+                        <div class="section-title"><span>Monthly Rental</span></div>
+
+                        <div class="row g-3 align-items-center mb-2">
+                            <div class="col-md-2"><label>Debit Card</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="number" class="form-control border-end-0" placeholder="Enter Debit Card">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-credit-card"></i>
+                                </span>
                             </div>
 
+                            <div class="col-md-2"><label>Credit Card</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="number" class="form-control border-end-0" placeholder="Enter Credit Card">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-credit-card-2-front"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2">
+                            <div class="col-md-2"><label>Commercial Card</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="number" class="form-control border-end-0"
+                                    placeholder="Enter Commercial Card">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-building"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Authentication Fee</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="number" class="form-control border-end-0"
+                                    placeholder="Enter Authentication Fee">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-shield-check"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 align-items-center mb-2">
+                            <div class="col-md-2"><label>PCI</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="number" class="form-control border-end-0" placeholder="Enter PCI">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-lock"></i>
+                                </span>
+                            </div>
+
+                            <div class="col-md-2"><label>Rental</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input type="number" class="form-control border-end-0" placeholder="Enter Rental">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-cash"></i>
+                                </span>
+                            </div>
                         </div>
 
                     </div>
+
+
+                    <!-- BANK DETAILS AT BOTTOM -->
+                    <div class="form-section mb-3">
+                        <div class="section-title"><span>Bank Details</span></div>
+
+                        <div class="row gy-1 gx-3 align-items-center">
+
+                            <!-- Name On Account -->
+                            <div class="col-md-2"><label>Name On Account</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="Enter Name On Account">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-person"></i>
+                                </span>
+                            </div>
+
+                            <!-- Account Number -->
+                            <div class="col-md-2"><label>Account Number</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="Enter Account Number">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-hash"></i>
+                                </span>
+                            </div>
+
+                            <!-- Sort Code -->
+                            <div class="col-md-2"><label>Sort Code</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="Enter Sort Code">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-diagram-3"></i>
+                                </span>
+                            </div>
+
+                            <!-- IBAN -->
+                            <div class="col-md-2"><label>IBAN</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="Enter IBAN">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-credit-card-2-front"></i>
+                                </span>
+                            </div>
+
+                            <!-- BIC -->
+                            <div class="col-md-2"><label>BIC</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="Enter BIC">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-bank"></i>
+                                </span>
+                            </div>
+
+                            <!-- Name Of Bank -->
+                            <div class="col-md-2"><label>Name Of Bank</label></div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <input class="form-control border-end-0" placeholder="Enter Bank Name">
+                                <span class="icon-box border-start-0">
+                                    <i class="bi bi-building"></i>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- KYC VERIFICATION SECTION -->
+                    <div class="card shadow-sm border-0 mt-4">
+                        <div class="card-body">
+
+                            <!-- Title -->
+                            <div class="section-title"><span>KYC Verification</span></div>
+
+                            <div class="row g-4">
+
+                                <!-- Picture ID -->
+                                <div class="col-md-6">
+                                    <label class="fw-semibold mb-2">
+                                        <i class="bi bi-person-badge me-1 text-primary"></i> Picture ID
+                                    </label>
+
+                                    <div class="kyc-upload-box" onclick="document.getElementById('pictureId').click();">
+                                        <p class="text-muted mb-0">Drop files here to upload</p>
+                                        <input type="file" id="pictureId" name="picture_id" hidden>
+                                    </div>
+                                </div>
+
+                                <!-- Inside/Outside Pics -->
+                                <div class="col-md-6">
+                                    <label class="fw-semibold mb-2">
+                                        <i class="bi bi-building me-1 text-success"></i> Inside/Outside pics
+                                    </label>
+
+                                    <div class="kyc-upload-box" onclick="document.getElementById('insidePics').click();">
+                                        <p class="text-muted mb-0">Drop files here to upload</p>
+                                        <input type="file" id="insidePics" name="inside_outside_pics" hidden>
+                                    </div>
+                                </div>
+
+                                <!-- Bill -->
+                                <div class="col-md-6">
+                                    <label class="fw-semibold mb-2">
+                                        <i class="bi bi-receipt me-1 text-warning"></i> Bill
+                                    </label>
+
+                                    <div class="kyc-upload-box" onclick="document.getElementById('billUpload').click();">
+                                        <p class="text-muted mb-0">Drop files here to upload</p>
+                                        <input type="file" id="billUpload" name="bill" hidden>
+                                    </div>
+                                </div>
+
+                                <!-- Bank Statement -->
+                                <div class="col-md-6">
+                                    <label class="fw-semibold mb-2">
+                                        <i class="bi bi-bank me-1 text-info"></i> Bank Statement
+                                    </label>
+
+                                    <div class="kyc-upload-box"
+                                        onclick="document.getElementById('bankStatement').click();">
+                                        <p class="text-muted mb-0">Drop files here to upload</p>
+                                        <input type="file" id="bankStatement" name="bank_statement" hidden>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="mt-3 ">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-send me-1"></i> Submit Application
+                        </button>
+                    </div>
+
+
+
+
+
                 </form>
+
 
             </div>
         </div>
 
         <style>
             body {
-                background: #f4f7fb;
-                font-size: 13px;
+                background: #f5f6f8;
+                font-size: 12px;
             }
 
-            .modern-card {
-                border-radius: 14px;
-                box-shadow: 0 8px 20px rgba(0, 0, 0, .05);
-                transition: .3s;
-                border: none;
+            .form-section {
+                background: #fff;
+                border: 1px solid #e2e5ea;
+                border-radius: 6px;
+                padding: 12px;
             }
 
-            .modern-card:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 14px 30px rgba(0, 0, 0, .08);
+            .section-title {
+                position: relative;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 700;
+                color: #2f3e5c;
+                margin-bottom: 14px;
             }
 
-            .section-header {
-                font-weight: 600;
-                font-size: 14px;
-                border-radius: 14px 14px 0 0;
+            .section-title::before,
+            .section-title::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: 32%;
+                height: 1px;
+                background: #dcdfe4;
+            }
+
+            .section-title::before {
+                left: 0;
+            }
+
+            .section-title::after {
+                right: 0;
+            }
+
+            .section-title span {
+                background: #fff;
+                padding: 0 12px;
+                color: #3a7bd5;
             }
 
             .form-control,
             .form-select {
-                height: 42px;
-                border-radius: 8px;
-                border: 1px solid #e2e6ea;
+                height: 32px !important;
+                min-height: 32px !important;
+                padding: 4px 8px !important;
+                font-size: 12px;
             }
 
             textarea.form-control {
-                height: 100px;
+                height: 64px !important;
+                resize: none;
+            }
+
+            label {
+                font-size: 12px;
+                font-weight: 600;
+                color: #444;
+                margin-bottom: 0;
             }
 
             .form-control:focus,
             .form-select:focus {
                 border-color: #3a7bd5;
-                box-shadow: 0 0 0 3px rgba(58, 123, 213, .15);
+                box-shadow: 0 0 0 2px rgba(58, 123, 213, 0.08);
             }
 
-            .form-label {
-                font-size: 12px;
-                font-weight: 600;
-                color: #555;
-                margin-bottom: 5px;
-            }
-
-            .btn-gradient {
-                background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+            .btn-primary {
+                background: #3a7bd5;
                 border: none;
-                color: #fff;
-                padding: 10px;
+                font-size: 14px;
+                padding: 9px;
                 font-weight: 600;
-                border-radius: 8px;
+            }
+
+            .form-control.border-end-0 {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .icon-box {
+                background: #f1f3f5;
+                border: 1px solid #ced4da;
+                border-left: none;
+                padding: 0 8px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                border-radius: 0 4px 4px 0;
+                font-size: 12px;
+            }
+
+            .switcBtn {
+                height: 16px;
+                width: 30px;
+            }
+
+            .kyc-upload-box {
+                height: 170px;
+                border: 2px dashed #dcdcdc;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: repeating-linear-gradient(45deg,
+                        #fafafa,
+                        #fafafa 10px,
+                        #f5f5f5 10px,
+                        #f5f5f5 20px);
                 transition: all 0.3s ease;
+                cursor: pointer;
             }
 
-            .btn-gradient:hover {
-                opacity: 0.9;
-            }
-
-            .bg-primary {
-                background: linear-gradient(45deg, #3a7bd5, #3a6073) !important;
-            }
-
-            .bg-dark {
-                background: linear-gradient(45deg, #232526, #414345) !important;
-            }
-
-            .bg-success {
-                background: linear-gradient(45deg, #11998e, #38ef7d) !important;
-            }
-
-            .bg-info {
-                background: linear-gradient(45deg, #2193b0, #6dd5ed) !important;
-            }
-
-            .bg-warning {
-                background: linear-gradient(45deg, #f7971e, #ffd200) !important;
-            }
-
-            .bg-secondary {
-                background: linear-gradient(45deg, #757f9a, #d7dde8) !important;
+            .kyc-upload-box:hover {
+                border-color: #0d6efd;
+                background: #f0f7ff;
             }
         </style>
-@endsection
+    @endsection
